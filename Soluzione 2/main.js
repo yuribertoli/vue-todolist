@@ -1,4 +1,4 @@
-/* const app = new Vue ({
+const app = new Vue ({
 
     el: "#root",
 
@@ -35,46 +35,5 @@
         }
     }
 
-}); */
-
-const app = new Vue ({
-
-    el: "#root",
-
-    data: {
-        input: "",
-        toDoList: [ {frase: "Studiare la documentazione", done: false}, 
-                    {frase: "Non capire la documentazione", done: false}, 
-                    {frase: "Ristudiare la documentazione", done: false}, 
-                    {frase: "Rinoncapire la documentazione", done: false} 
-                ],
-        /* striked: "" */
-    },
-
-    methods: {
-
-        add() { 
-            if (this.input != "") { //evito di aggiungere valori vuoti alla lista
-
-                let oggetto = {frase: this.input, done: false}
-                //aggiungo all'array il valore della variabile input
-                this.toDoList.push(oggetto);
-
-                //resetto il valore
-                this.input = "";
-            }       
-        },
-
-        remove(index) {
-            this.toDoList.splice(index, 1);
-        },
-
-        active(indice) {
-
-            this.toDoList[indice].done = !this.toDoList[indice].done
-
-        }
-    }
-
-});
+}); 
 
