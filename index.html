@@ -10,22 +10,60 @@
 </head>
 <body>
     
-    <div id="root">
+    <!-- <div id="root">
 
         <header>
+
             <input @keyup.enter="add" type="text" v-model="input">
             <button @click="add">Aggiungi Nota</button>
+        
         </header>
 
         <main>
+
             <div v-if="toDoList.length > 0" id="lista">
+
                 <ul v-for="(item, index) in toDoList" @click="active($event)">
+
                     <li>{{item}} <i @click="remove(index)" class="fa-solid fa-circle-xmark"></i></li>
+
                 </ul>
+
             </div>
+
             <div v-else id="else">
                 Non ci sono elementi presenti nella lista
             </div>
+
+        </main>
+
+    </div> -->
+
+    <div id="root">
+
+        <header>
+
+            <input @keyup.enter="add" type="text" v-model="input">
+            <button @click="add">Aggiungi Nota</button>
+        
+        </header>
+
+        <main>
+
+            <div v-if="toDoList.length > 0" id="lista">
+
+                <ul v-for="(item, index) in toDoList" @click="active(index)">
+
+                    <li :class="toDoList.done == true? 'strike' : '' ">{{item.frase}} <i @click="remove(index)" class="fa-solid fa-circle-xmark"></i></li>
+
+                </ul>
+
+            </div>
+
+            <div v-else id="else">
+                Non ci sono elementi presenti nella lista
+            </div>
+
         </main>
 
     </div>
