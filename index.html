@@ -12,6 +12,18 @@
     
     <div id="root">
 
+        <header>
+            <input type="text" v-model="input">
+            <button @click="add">Aggiungi Nota</button>
+        </header>
+
+        <main>
+            <div>
+                <ul v-for="(item, index) in toDoList">
+                    <li>{{item}}</li>
+                </ul>
+            </div>
+        </main>
 
     </div>
 
