@@ -14,6 +14,8 @@
 
         <header>
 
+            <!-- rilasciando il tasto invio richiamo la funzione add. 
+                Mentre con v-model vado a scrivere sulla variabile input-->
             <input @keyup.enter="add" type="text" v-model="input">
             <button @click="add">Aggiungi Nota</button>
         
@@ -21,11 +23,15 @@
 
         <main>
 
+            <!-- Se in toDoList c'è almeno 1 elemento, mostro ul -->
             <div v-if="toDoList.length > 0" id="lista">
 
-                <ul v-for="(item, index) in toDoList" @click="active($event)">
+                <!-- ciclo ogni dato ed il suo indice in toDoList -->
+                <ul v-for="(item, index) in toDoList">
 
-                    <li>{{item}} <i @click="remove(index)" class="fa-solid fa-circle-xmark"></i></li>
+                    <!-- al click attivo la funzione active. Tramite $event accedo al DOM direttamente e gli passo una funzione -->
+                    <!-- mostro ogni dato dell'array -->
+                    <li @click="active($event)">{{item}} <i @click="remove(index)" class="fa-solid fa-circle-xmark"></i></li>
 
                 </ul>
 

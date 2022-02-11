@@ -3,8 +3,14 @@ const app = new Vue ({
     el: "#root",
 
     data: {
+
+        //creo una variabile vuota per popolare il v-model dell'input
         input: "",
+
+        //array di stringhe
         toDoList: ["Studiare la documentazione", "Non capirci niente", "Ristudiare la documentazione", "Rinoncapirci niente"],
+        
+        //variabile da utilizzare per il toggle
         done: false
     },
 
@@ -20,10 +26,13 @@ const app = new Vue ({
             }       
         },
 
+        //utilizzo splice per rimuovere all'indice selezionato 1 elemento (quello selezionato quindi)
         remove(index) {
             this.toDoList.splice(index, 1);
         },
 
+        //cambio il valore di done con il suo opposto
+        //aggiungo o rimuovo la classe strike accedendo al DOM tramite evento
         active(evento) {
             if(this.done == false) {
                 this.done = true;
