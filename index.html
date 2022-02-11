@@ -13,7 +13,7 @@
     <div id="root">
 
         <header>
-            <input type="text" v-model="input">
+            <input @keyup.enter="add" type="text" v-model="input">
             <button @click="add">Aggiungi Nota</button>
         </header>
 
