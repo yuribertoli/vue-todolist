@@ -19,8 +19,8 @@
 
         <main>
             <div v-if="toDoList.length > 0" id="lista">
-                <ul v-for="(item, index) in toDoList" @click="strike(index)">
-                    <li :class="{strike: done}">{{item}} <i @click="remove(index)" class="fa-solid fa-circle-xmark"></i></li>
+                <ul v-for="(item, index) in toDoList" @click="active($event)">
+                    <li>{{item}} <i @click="remove(index)" class="fa-solid fa-circle-xmark"></i></li>
                 </ul>
             </div>
             <div v-else id="else">

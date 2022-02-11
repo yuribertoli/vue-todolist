@@ -24,10 +24,16 @@ const app = new Vue ({
             this.toDoList.splice(index, 1);
         },
 
-        strike(index) {
-
-            this.done = !this.done;           
+        active(event) {
+            if(!this.done) {
+                this.done = true;
+                event.currentTarget.classList.add("strike")
+            } else if(this.done) {
+                this.done = false;
+                event.currentTarget.classList.remove("strike")
+            }
         }
     }
 
 });
+
