@@ -4,7 +4,8 @@ const app = new Vue ({
 
     data: {
         input: "",
-        toDoList: ["Studiare la documentazione", "Non capirci niente", "Ristudiare la documentazione", "Rinoncapirci niente"]
+        toDoList: ["Studiare la documentazione", "Non capirci niente", "Ristudiare la documentazione", "Rinoncapirci niente"],
+        done: false
     },
 
     methods: {
@@ -21,6 +22,11 @@ const app = new Vue ({
 
         remove(index) {
             this.toDoList.splice(index, 1);
+        },
+
+        strike(index) {
+
+            this.done = !this.done;           
         }
     }
 
