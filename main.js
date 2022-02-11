@@ -18,6 +18,10 @@ const app = new Vue ({
                 this.input = "";
             }       
         },
+
+        remove(index) {
+            this.toDoList.splice(index, 1);
+        }
     }
 
 });

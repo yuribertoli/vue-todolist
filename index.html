@@ -20,7 +20,7 @@
         <main>
             <div>
                 <ul v-for="(item, index) in toDoList">
-                    <li>{{item}}</li>
+                    <li>{{item}} <i @click="remove(index)" class="fa-solid fa-circle-xmark"></i></li>
                 </ul>
             </div>
         </main>
