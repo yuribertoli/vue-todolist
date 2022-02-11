@@ -25,10 +25,10 @@ const app = new Vue ({
         },
 
         active(event) {
-            if(!this.done) {
+            if(this.done == false) {
                 this.done = true;
                 event.currentTarget.classList.add("strike")
-            } else if(this.done) {
+            } else if(this.done == true) {
                 this.done = false;
                 event.currentTarget.classList.remove("strike")
             }
