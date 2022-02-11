@@ -18,10 +18,13 @@
         </header>
 
         <main>
-            <div>
+            <div v-if="toDoList.length > 0" id="lista">
                 <ul v-for="(item, index) in toDoList">
                     <li>{{item}} <i @click="remove(index)" class="fa-solid fa-circle-xmark"></i></li>
                 </ul>
+            </div>
+            <div v-else id="else">
+                Non ci sono elementi presenti nella lista
             </div>
         </main>
 
