@@ -43,6 +43,8 @@
 
         <header>
 
+            <!-- rilasciando il tasto invio richiamo la funzione add. 
+                Mentre con v-model vado a scrivere sulla variabile input-->
             <input @keyup.enter="add" type="text" v-model="input">
             <button @click="add">Aggiungi Nota</button>
         
@@ -50,16 +52,22 @@
 
         <main>
 
+            <!-- Se in toDoList c'è almeno 1 elemento, mostro ul -->
             <div v-if="toDoList.length > 0" id="lista">
 
-                <ul v-for="(item, index) in toDoList" @click="active(index)">
+                <!-- ciclo ogni oggetto ed il suo index in toDoList -->
+                <!-- cliccando su di un li cambio il valore della sua variabile -->
+                <ul v-for="(oggetto, index) in toDoList" @click="active(index)">
 
-                    <li :class="item.done == true? 'strike' : '' ">{{item.frase}} <i @click="remove(index)" class="fa-solid fa-circle-xmark"></i></li>
+                    <!-- se la variabile done ha il valore di true (che cambia con il click active(index)), allora le assegno la classe strike -->
+                    <!-- mostro a video le frasi dell'oggetto -->
+                    <!-- cliccando sulla X rimuovo quello stesso elemento dall'array che lo contiene -->
+                    <li :class="oggetto.done == true? 'strike' : '' ">{{oggetto.frase}} <i @click="remove(index)" class="fa-solid fa-circle-xmark"></i></li>
 
                 </ul>
 
             </div>
-
+            
             <div v-else id="else">
                 Non ci sono elementi presenti nella lista
             </div>

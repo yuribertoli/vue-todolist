@@ -44,9 +44,9 @@ const app = new Vue ({
     data: {
         input: "",
         toDoList: [ {frase: "Studiare la documentazione", done: false}, 
-                    {frase: "Studiare la documentazione", done: false}, 
-                    {frase: "Studiare la documentazione", done: false}, 
-                    {frase: "Studiare la documentazione", done: false} 
+                    {frase: "Non capire la documentazione", done: false}, 
+                    {frase: "Ristudiare la documentazione", done: false}, 
+                    {frase: "Rinoncapire la documentazione", done: false} 
                 ],
         /* striked: "" */
     },
