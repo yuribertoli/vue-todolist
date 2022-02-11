@@ -8,7 +8,15 @@ const app = new Vue ({
     },
 
     methods: {
+        add() { 
+            if (this.input != "") { //evito di aggiungere valori vuoti alla lista
+                //aggiungo all'array il valore della variabile input
+                this.toDoList.push(this.input);
 
+                //resetto il valore
+                this.input = "";
+            }       
+        }
     }
 
 });
