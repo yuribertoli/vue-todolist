@@ -73,16 +73,6 @@ const app = new Vue ({
 
             this.toDoList[indice].done = !this.toDoList[indice].done
 
-            /* if (this.toDoList[indice].done == true) {
-
-                this.toDoList[indice].done == false;
-                this.striked = "";
-
-            } else if (this.toDoList[indice].done == false) {
-
-                this.toDoList[indice].done == true;
-                this.striked = "strike";
-            } */
         }
     }
 

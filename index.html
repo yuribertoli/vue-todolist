@@ -54,7 +54,7 @@
 
                 <ul v-for="(item, index) in toDoList" @click="active(index)">
 
-                    <li :class="toDoList.done == true? 'strike' : '' ">{{item.frase}} <i @click="remove(index)" class="fa-solid fa-circle-xmark"></i></li>
+                    <li :class="item.done == true? 'strike' : '' ">{{item.frase}} <i @click="remove(index)" class="fa-solid fa-circle-xmark"></i></li>
 
                 </ul>
 
