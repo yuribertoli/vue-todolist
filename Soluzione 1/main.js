@@ -8,10 +8,10 @@ const app = new Vue ({
         input: "",
 
         //creo un array di oggetti dove inserisco la frase da mostrare e la variabile utile al toggle
-        toDoList: [ {frase: "Studiare la documentazione", done: false}, 
-                    {frase: "Non capire la documentazione", done: false}, 
-                    {frase: "Ristudiare la documentazione", done: false}, 
-                    {frase: "Rinoncapire la documentazione", done: false} 
+        toDoList: [ {frase: "Zucca", done: false}, 
+                    {frase: "Patate", done: false}, 
+                    {frase: "Uova", done: false}, 
+                    {frase: "Riso", done: false} 
                 ],
     },
 

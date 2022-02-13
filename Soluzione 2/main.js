@@ -8,7 +8,7 @@ const app = new Vue ({
         input: "",
 
         //array di stringhe
-        toDoList: ["Studiare la documentazione", "Non capirci niente", "Ristudiare la documentazione", "Rinoncapirci niente"],
+        toDoList: ["Studiare", "Fare la spesa", "Pulire casa", "Cena del cane"],
         
         //variabile da utilizzare per il toggle
         done: false
